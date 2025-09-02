@@ -1,0 +1,18 @@
+services:
+  vllm:
+    build: .
+    container_name: vllm-1
+    ports:
+      - "7060:8000"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=1
+    volumes:
+      - "${HOME}/.cache/huggingface:/root/.cache/huggingface"
+    ipc: host
+    secrets:
+      - source: api_key_secret
+        target: /run/secrets/vllm_api_key
+
+secrets:
+  api_key_secret:
+    file: .secrets/API_KEY
