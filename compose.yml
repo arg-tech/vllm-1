@@ -15,4 +15,4 @@ services:
 
 secrets:
   api_key_secret:
-    file: .secrets/API_KEY
+    file: .secrets/API_KEY.txt
