@@ -8,5 +8,5 @@ python3 -m vllm.entrypoints.openai.api_server \
   --model Qwen/Qwen3-4B \
   --dtype=half \
   --gpu-memory-utilization 0.95 \
-  --max-model-len 4096
-  
+  --max-model-len 4096 \
+  --disable-log-requests
