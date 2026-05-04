@@ -9,3 +9,5 @@ python3 -m vllm.entrypoints.openai.api_server \
   --dtype=half \
   --gpu-memory-utilization 0.85 \
   --max-model-len 4096 \
+  --enforce-eager \
+  --skip-mm-profiling
